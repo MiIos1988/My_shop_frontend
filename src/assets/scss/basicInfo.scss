@@ -1,0 +1,32 @@
+.wrapperCard {
+    min-width: 400px;
+    background-color: #f7f7f9;
+    border: 1px solid #eee;
+    padding: 25px;
+    font-size: 16px;
+    margin: 15px;
+
+    img {
+        opacity: 0.5;
+    }
+
+    &:hover {
+        img {
+            opacity: 1;
+        }
+    }
+
+    .contentWrap {
+        margin-right: 80px;
+
+        .title {
+            margin-bottom: 3px;
+            font-size: 17px;
+            font-weight: 400;
+        }
+
+        .content {
+            font-size: 15px;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+.cardDropdown {
+    position: absolute;
+    width: 30%;
+    // height: 50px;
+    background-color: #fff;
+    right: 0;
+    // padding: 10px;
+    color: #7a7a7a;
+    text-align: center;
+    display: none;
+    z-index: 10;
+
+    .productCart {
+        color: black;
+
+        img {
+            height: 50px;
+            width: 50px;
+            object-fit: cover;
+            margin-left: 10px;
+        }
+    }
+
+    .quantity {
+        margin-right: 10px;
+    }
+
+    .btnField {
+        background-color: #222;
+
+        button {
+            width: 90%;
+            margin: 20px;
+
+            &:hover {
+                background-color: black;
+                color: white;
+            }
+        }
+    }
+
+    .productLink {
+        text-decoration: none;
+
+    }
+
+    .removeProduct {
+        border-radius: 50%;
+
+
+    }
+}

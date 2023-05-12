@@ -1,0 +1,27 @@
+.selectElement {
+  width: 115px !important;
+  background-color: #212529 !important;
+  color: white !important;
+  border: none !important;
+  text-align: right !important;
+  option {
+    text-align: center !important;
+  }
+}
+.selectElement2 {
+  width: 80px !important;
+}
+
+@media (max-width: 576px) {
+  .topHeaderDiv {
+    flex-direction: column;
+
+    .freeShop {
+      text-align: center;
+    }
+
+    .rightDiv {
+      margin: auto;
+    }
+  }
+}

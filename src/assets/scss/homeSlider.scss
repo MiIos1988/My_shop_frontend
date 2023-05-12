@@ -1,0 +1,65 @@
+.mySwiper {
+
+    .swiper-wrapper {
+        width: 100% !important;
+
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        margin: 0 5%;
+        background-color: white;
+        color: #111 !important;
+        padding: 15px !important;
+        width: 50px !important;
+        height: 50px !important;
+
+
+
+        &:hover {
+            color: white !important;
+            background-color: #111;
+
+        }
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        font-size: 16px !important;
+        font-weight: 600;
+
+    }
+    .slideField{
+        width: 100%;
+        height: 100vh;
+        background-color: #EFF1F0;
+        display: flex;
+
+        .imgField{
+            width: 50%;
+            height: 100vh;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+    }
+    @media (max-width: 992px) { 
+        .slideField{
+            flex-direction: column;
+            .imgField{
+                width: 100%;
+                height: 70%;
+            }
+            .linkField{
+                height: 30%;
+                text-align: center;
+                
+            }
+        }
+    }
+
+}

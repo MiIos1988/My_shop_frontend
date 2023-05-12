@@ -1,0 +1,33 @@
+.cartShop {
+    img {
+        width: 80px;
+        height: 80px;
+    }
+
+    td {
+        height: 100px;
+        vertical-align: middle;
+    }
+
+    button {
+        border-radius: 50%;
+    }
+
+    .payBtn {
+        border-radius: 0;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .cartProduct {
+        flex-direction: column;
+
+        .cartP {
+            padding: 0 !important;
+        }
+
+    }
+
+   
+}

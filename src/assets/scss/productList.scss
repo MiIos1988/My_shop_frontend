@@ -1,0 +1,10 @@
+@media (max-width: 576px) { 
+    .paginationField{
+        flex-direction: column;
+        text-align: center;
+        .paginationNav{
+            margin: auto;
+            margin-top: 1rem;
+        }
+    }
+}
