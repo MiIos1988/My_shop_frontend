@@ -24,8 +24,7 @@ const ProductListComponent = (props) => {
   const dispatch = useDispatch();
 
   const isMountedRef = useRef(false)
-  dispatch(toggleLoader(false));
-
+  
   useEffect(() => {
 
     if (!isMountedRef.current) {
@@ -41,6 +40,7 @@ const ProductListComponent = (props) => {
     } else {
       loadAllProducts();
     }
+    dispatch(toggleLoader(false));
 
   }, [pagination.perPage, pagination.start, pagination.allPag, queryParams]);
 
