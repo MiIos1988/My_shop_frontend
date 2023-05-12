@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   categoryProductData,
   getProductData,
@@ -23,7 +23,16 @@ const ProductListComponent = (props) => {
   const [active, setActive] = useState(1);
   const dispatch = useDispatch();
 
+  const isMountedRef = useRef(false)
+  dispatch(toggleLoader(false));
+
   useEffect(() => {
+
+    if (!isMountedRef.current) {
+      isMountedRef.current = true;
+      return;
+    }
+
     dispatch(toggleLoader(true));
     if (queryParams.get("search")) {
       onSearch();
@@ -32,6 +41,7 @@ const ProductListComponent = (props) => {
     } else {
       loadAllProducts();
     }
+
   }, [pagination.perPage, pagination.start, pagination.allPag, queryParams]);
 
   const loadAllProducts = () => {
@@ -49,9 +59,6 @@ const ProductListComponent = (props) => {
         );
       })
       .catch((err) => console.log(err))
-      .finally(() => {
-        dispatch(toggleLoader(false));
-      });
   };
 
   const onSearch = () => {
