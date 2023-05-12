@@ -26,7 +26,7 @@ const PaymentElementsComponent = ({ ck }) => {
     stripe.confirmPayment({
       elements,
       confirmParams: {
-        return_url: 'https://my-shop-frontend-dun.vercel.app/'
+        return_url: 'https://my-shop-backend-3h5w.onrender.com'
       }
     })
   }
