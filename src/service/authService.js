@@ -14,4 +14,4 @@ export const removeLocalStorage = (name) => localStorage.removeItem(name);
 
 export const isUserLogin = () => localStorage.getItem("my_token");
 
-export const isAdmin = () => isUserLogin() && jwt_decode(localStorage.getItem("my_token"))._doc?.isAdmin;
+export const isAdmin = () => isUserLogin() && jwt_decode(localStorage.getItem("my_token"))?.isAdmin;

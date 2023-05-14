@@ -26,7 +26,7 @@ const PaymentElementsComponent = ({ ck }) => {
     stripe.confirmPayment({
       elements,
       confirmParams: {
-        return_url: 'https://my-shop-backend-3h5w.onrender.com'
+        return_url: 'http://localhost:3000'
       }
     })
   }

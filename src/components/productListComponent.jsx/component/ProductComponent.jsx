@@ -3,7 +3,7 @@
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { addToCart } from "../../../redux/cartSlicer";
-import { deleteProductData, getProductInLocalStorage, setProductInLocalStorage } from "../../../service/productService";
+import { deleteProductData } from "../../../service/productService";
 import { toggleLoader } from "../../../redux/loaderSlicer";
 
 function ProductComponent(props) {

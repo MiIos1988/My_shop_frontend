@@ -19,7 +19,6 @@ const SliderProductComponent = () => {
     dispatch(toggleLoader(true));
     getProductData({ start: 0, perPage: 16 })
       .then((res) => {
-        
         setProduct(res.data.data);
         dispatch(toggleLoader(false));
       })

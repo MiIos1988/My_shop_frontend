@@ -146,7 +146,6 @@ const NavbarComponent = () => {
               className="dropdown-menu dropdown-menu-end animate__animated animate__slideInDown userDropdown"
               aria-labelledby="navbarDropdown"
             >
-              {console.log(userStore.email)}
               {!userStore?.email ? (
                 <>
                   <li>
