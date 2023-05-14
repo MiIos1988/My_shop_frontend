@@ -26,13 +26,7 @@ const ProductListComponent = (props) => {
   const isMountedRef = useRef(false)
   
   useEffect(() => {
-
-    if (!isMountedRef.current) {
-      isMountedRef.current = true;
-      return;
-    }
-
-    dispatch(toggleLoader(true));
+    
     if (queryParams.get("search")) {
       onSearch();
     } else if (queryParams.get("category")) {
@@ -94,10 +88,10 @@ const ProductListComponent = (props) => {
         setArrayPagination(
           Array.from({ length: paginationAllNumber }, (v, k) => k + 1)
         );
+        // dispatch(toggleLoader(false));
       })
       .catch((err) => console.log(err))
       .finally(() => {
-        dispatch(toggleLoader(false));
       });
   };
 

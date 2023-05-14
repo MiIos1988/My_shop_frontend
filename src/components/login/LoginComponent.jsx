@@ -20,7 +20,8 @@ const LoginComponent = () => {
 
   useEffect(() => {
     setQuery(queryParams.get("id"))
-  },[]
+    dispatch(toggleLoader(false));
+  }, []
   )
 
   const LoginSchema = Yup.object().shape({
@@ -33,12 +34,13 @@ const LoginComponent = () => {
       .then((res) => {
         const decodedToken = jwt_decode(res.data.token);
         setTokenInLocalStorage(res.data.token);
-        dispatch(saveUser(decodedToken._doc));
+        dispatch(saveUser(decodedToken));
         if (isAdmin()) {
           navigate("/dashboard");
           dispatch(isAdminLogin(true));
         } else {
-        query ? navigate("/checkout") : navigate(-1)
+          query ? navigate("/checkout") : navigate(-1)
+          
         }
       })
       .catch((err) => console.log(err));

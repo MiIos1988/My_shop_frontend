@@ -1,11 +1,12 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { isAdminLogin, removeUser } from "../../redux/userSlicer";
-import { isAdmin, removeLocalStorage } from "../../service/authService";
+import { removeLocalStorage } from "../../service/authService";
 import "animate.css";
 import logo from "../../assets/image/logo-zurea.jpg";
 import { removeProduct } from "../../redux/cartSlicer";
 import { useState } from "react";
+import { toggleLoader } from "../../redux/loaderSlicer";
 
 const NavbarComponent = () => {
   const dispatch = useDispatch();
@@ -39,6 +40,8 @@ const NavbarComponent = () => {
 
   const selectedCategory = (e) => {
     navigate(`/category?category=${e.target.getAttribute("value")}`);
+    dispatch(toggleLoader(true));
+    console.log("working")
   };
 
   return (
