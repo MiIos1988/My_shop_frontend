@@ -8,8 +8,7 @@ import TopHeaderComponent from "./components/topHaderComponent/TopHeaderComponen
 import GoToDashboard from "./pages/admin/GoToDashboard";
 import { saveUser } from "./redux/userSlicer";
 import jwt_decode from 'jwt-decode';
-
-axios.defaults.baseURL = "http://localhost:5050/api"
+axios.defaults.baseURL = process.env.REACT_APP_BACKEND_URL
 axios.interceptors.request.use((config) => {
   if (localStorage.hasOwnProperty("my_token")) {
     config.headers.Authorization = localStorage.getItem("my_token")
